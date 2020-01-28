@@ -10,13 +10,27 @@
 
 3. Make sure Git is tracking the file and then create a new commit.Make changes to the file, and then commit these changes.
 
-	
+	# git add -A
+	# git commit -m "added two files"
+	# echo "hi there" > newfile.txt
+	# git status # ---> modified:   newfile.txt
+	# git add -A
+	# git commit -m "add text to newfile.txt"
+
 
 4. Add two new files to your repository, but only commit one of them.
 
-
+	# touch file3.txt file4.txt
+	# git add file3.txt
+	# git commit -m "added file3.txt"
 
 5. What is the status of your repository after the commit?Undo the last commit, add the untracked file, and redo the commit.
+
+	# git status ---> (Untracked files: file4.txt)
+	# git reset --soft HEAD~
+	# git add -A
+	# git status
+	# git commit -m "added two files"
 
 
 
